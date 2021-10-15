@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Just Run</string>
+    <string-array name="filter_options">
+        <item>التاريخ</item>
+        <item>وقت الجري</item>
+        <item>المسافه</item>
+        <item>متوسط السرعه</item>
+        <item>السعرات المستهلكه</item>
+    </string-array>
+
+    <string name="program">برنامجي</string>
+    <string name="profile">حسابي</string>
+</resources>

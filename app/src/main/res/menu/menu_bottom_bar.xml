@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/program_item"
+        android:icon="@drawable/ic_running_program"
+        android:title="@string/program"
+        app:showAsAction="always"
+
+        />
+
+
+<!--    <item-->
+<!--        android:id="@+id/blank1"-->
+<!--        android:title="   "-->
+<!--        app:showAsAction="ifRoom"-->
+<!--        android:checkable="false"-->
+<!--        android:enabled="false"-->
+<!--        />-->
+    <item
+        android:id="@+id/workout_item"
+        android:title=""
+
+        />
+<!--    <item-->
+<!--        android:id="@+id/blank2"-->
+<!--        android:title="   "-->
+<!--        app:showAsAction="ifRoom"-->
+<!--        android:checkable="false"-->
+<!--        android:enabled="false"-->
+<!--        />-->
+
+    <item
+        android:id="@+id/profile_item"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/profile"
+        app:showAsAction="always" />
+
+</menu>

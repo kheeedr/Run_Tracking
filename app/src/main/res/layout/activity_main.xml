@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".presentation.MainActivity">
+
+        <fragment
+            android:id="@+id/fragmentContainerView"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_50sdp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/nav_host" />
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/nav_bar"
+            style="@style/BottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/back_bar"
+            android:paddingHorizontal="@dimen/_15sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            app:itemIconSize="@dimen/_25sdp"
+            app:itemIconTint="@drawable/bottom_navigation_selector"
+            app:itemTextAppearanceActive="@style/BottomNavigationViewText.Active"
+            app:itemTextAppearanceInactive="@style/BottomNavigationViewText"
+            app:itemTextColor="@drawable/bottom_navigation_selector"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/menu_bottom_bar"
+            tools:ignore="SpeakableTextPresentCheck,UnusedAttribute" />
+
+
+        <ImageView
+            android:id="@+id/fab_main_page"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_gravity="center|bottom"
+            android:layout_marginBottom="@dimen/_7sdp"
+            android:elevation="@dimen/_10sdp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_running_man"
+            android:translationZ="@dimen/_20sdp"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

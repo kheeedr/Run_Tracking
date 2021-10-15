@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Three_rounded_corners">
+        <item name="cornerSizeBottomLeft">20%</item>
+        <item name="cornerSizeBottomRight">20%</item>
+        <item name="cornerSizeTopLeft">20%</item>
+        <item name="cornerSizeTopRight">0%</item>
+    </style>
+
+    <style name="BottomNavigationViewText" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="fontFamily">@font/metropolis_medium</item>
+
+    </style>
+
+    <style name="BottomNavigationViewText.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="fontFamily">@font/metropolis_semi_bold</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="@style/Widget.Design.BottomNavigationView">
+        <item name="elevation">@dimen/_10sdp</item>
+        <item name="android:translationZ">@dimen/_15sdp</item>
+    </style>
+
+
+
+</resources>
