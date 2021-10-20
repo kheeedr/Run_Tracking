@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
 
@@ -9,11 +10,117 @@
         android:background="@color/white"
         tools:context=".presentation.ui.user_setup.GetGenderFragment">
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:src="@drawable/ic_bar_steps_3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_header_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:fontFamily="@font/avenir_next_demi_bold"
+                android:gravity="center"
+                android:text="What is your gender?"
+                android:textColor="@color/secondary_color"
+                android:textSize="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+            <TextView
+                android:id="@+id/tv_body_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:fontFamily="@font/metropolis_medium"
+                android:gravity="center"
+                android:lineHeight="@dimen/_15sdp"
+                android:text="We ask this to make sure your journey is fun, healthy and balanced."
+                android:textColor="@color/natural2"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@id/tv_header_welcome"
+                tools:layout_editor_absoluteX="0dp"
+                tools:targetApi="p" />
+
+            <RadioGroup
+                android:id="@+id/radioGr_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:checkedButton="@id/radioBt_male"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintVertical_bias="0.1"
+                app:layout_constraintBottom_toTopOf="@+id/bt_to_getTall"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_body_welcome">
+
+                <RadioButton
+                    android:id="@+id/radioBt_male"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:background="@drawable/selector_radio_bt_background"
+                    android:button="@null"
+                    android:fontFamily="@font/avenir_next_demi_bold"
+                    android:gravity="center"
+                    android:drawableTint="@color/radio_icon_tint"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:text="Male  👨"
+                    android:textColor="@drawable/selector_radio_bt_text_color"
+                    android:textSize="@dimen/_13sdp" />
+
+                <RadioButton
+                    android:id="@+id/radioBt_female"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/selector_radio_bt_background"
+                    android:button="@null"
+                    android:fontFamily="@font/avenir_next_demi_bold"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:text="Female    👩"
+                    android:textColor="@drawable/selector_radio_bt_text_color"
+                    android:textSize="@dimen/_13sdp" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/bt_to_getTall"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/back_button"
+                android:fontFamily="@font/avenir_next_demi_bold"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:backgroundTint="@color/primary_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </FrameLayout>
 </layout>

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -11,8 +13,104 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layoutDirection="ltr"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck"
+                tools:listitem="@layout/item_welcome" />
+
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <View
+                android:id="@+id/back_under_half"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@drawable/back_center_gradiant_for_light_background"
+                app:layout_constraintBottom_toBottomOf="@+id/bt_getStarted"
+                app:layout_constraintTop_toBottomOf="@id/guideline_center_horizontal"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <me.relex.circleindicator.CircleIndicator2
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:layoutDirection="ltr"
+                android:translationZ="@dimen/_20sdp"
+                app:ci_drawable="@drawable/ic_primary_color_circle"
+                app:ci_drawable_unselected="@drawable/ic_primary_color_circle"
+                app:ci_height="@dimen/_5sdp"
+                app:ci_width="@dimen/_5sdp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_body_welcome"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_header_welcome" />
+
+            <TextView
+                android:id="@+id/tv_header_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/metropolis_bold"
+                android:gravity="center"
+                android:text="HAY RUNNER"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:textSize="@dimen/_30sdp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_body_welcome"
+                app:layout_constraintTop_toTopOf="@+id/guideline_center_horizontal"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <TextView
+                android:id="@+id/tv_body_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:fontFamily="@font/metropolis_medium"
+                android:gravity="center"
+                android:text="Bet on yourself, achieve your goals, win your money back and more."
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintBottom_toTopOf="@id/bt_getStarted"
+                app:layout_constraintTop_toBottomOf="@id/tv_header_welcome"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:id="@+id/bt_getStarted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:background="@drawable/back_button"
+                android:fontFamily="@font/metropolis_medium"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                app:backgroundTint="@color/primary_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_body_welcome" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </FrameLayout>
 </layout>

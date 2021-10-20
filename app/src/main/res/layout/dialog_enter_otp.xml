@@ -1,13 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        >
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_sheet_stroked">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_5sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:src="@drawable/ic_dialog_label"
+            app:layout_constraintBottom_toTopOf="@+id/tv_header_welcome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_header_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/metropolis_semi_bold"
+            android:gravity="center"
+            android:text="Enter the verification code we sent you."
+            android:textColor="@color/secondary_color"
+            android:textSize="@dimen/_18sdp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 
+        <com.chaos.view.PinView
+            android:id="@+id/et_verifyCode_otp"
+            style="@style/PinWidget.PinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:cursorVisible="true"
+            android:inputType="number"
+            android:itemBackground="@drawable/ic_otp_item"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            app:cursorColor="@color/primary_color"
+            app:cursorWidth="@dimen/_1sdp"
+            app:hideLineWhenFilled="true"
+            app:itemCount="4"
+            app:itemHeight="@dimen/_40sdp"
+            app:itemSpacing="@dimen/_5sdp"
+            app:itemWidth="@dimen/_40sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_header_welcome"
+            app:lineColor="@color/trans"
+            app:lineWidth="0dp"
+            app:viewType="rectangle" />
+
+        <android.widget.Button
+            android:id="@+id/bt_back_otp"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginVertical="@dimen/_25sdp"
+            android:background="@drawable/back_button_stroked"
+            android:fontFamily="@font/metropolis_medium"
+            android:paddingVertical="@dimen/_10sdp"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textColor="@color/secondary_color"
+            android:textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_verifyCode_otp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

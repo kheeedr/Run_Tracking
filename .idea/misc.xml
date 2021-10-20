@@ -5,32 +5,84 @@
       <map>
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable-v24/back_bar.xml" value="0.2573883161512027" />
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3841025641025641" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/back_button.xml" value="0.332" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/back_button_filled.xml" value="0.3328888888888889" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/back_button_stroked.xml" value="0.3373873873873874" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/back_button_strokked.xml" value="0.3373873873873874" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/back_center_gradiant_for_light_background.xml" value="0.3328888888888889" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/back_circular_gradiant_for_light_background.xml" value="0.3328888888888889" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/back_edittext.xml" value="0.3328888888888889" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/back_gradiant_for_light_background.xml" value="0.332" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/back_sheet_stroked.xml" value="0.3328888888888889" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/back_white_center_gradiant_for_light_background.xml" value="0.3328888888888889" />
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/backgroun_splash.xml" value="0.3841025641025641" />
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/background_splash.xml" value="0.2465277777777778" />
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/bottom_navigation_selector.xml" value="0.3841025641025641" />
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_app_logo_secondary.xml" value="0.3841025641025641" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_bar_steps_0.xml" value="0.3373873873873874" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_bar_steps_1.xml" value="0.3373873873873874" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_bar_steps_2.xml" value="0.3373873873873874" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_bar_steps_3.xml" value="0.3373873873873874" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_bar_steps_4.xml" value="0.3373873873873874" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_bar_steps_5.xml" value="0.3373873873873874" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_bar_steps_6.xml" value="0.3373873873873874" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_bar_steps_7.xml" value="0.3373873873873874" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_bar_steps_8.xml" value="0.3373873873873874" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_body_fat_selected.xml" value="0.16018518518518518" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_body_fat_unselected.xml" value="0.16018518518518518" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_body_slim_selected.xml" value="0.16018518518518518" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_body_slim_unselected.xml" value="0.16018518518518518" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_body_thin_selected.xml" value="0.16018518518518518" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_body_thin_unselected.xml" value="0.16018518518518518" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_confetti.xml" value="0.3328888888888889" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_current_indicator_position.xml" value="0.3328888888888889" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_dialog_label.xml" value="0.3373873873873874" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_facebook.xml" value="0.3328888888888889" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_fat_selected.xml" value="0.3328888888888889" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_female.xml" value="0.3328888888888889" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_finish_setup.xml" value="0.3328888888888889" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_google.xml" value="0.3328888888888889" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_img_beach_runner.xml" value="0.3373873873873874" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_male.xml" value="0.3328888888888889" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_otp_item.xml" value="0.3373873873873874" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_phone.xml" value="0.3328888888888889" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_primary_color_circle.xml" value="0.3328888888888889" />
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_profile.xml" value="0.3841025641025641" />
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_running_program.xml" value="0.2465277777777778" />
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_splash.xml" value="0.3841025641025641" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/ic_thin_unselected.xml" value="0.16018518518518518" />
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/img_splash.xml" value="0.33" />
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/img_splash_full.xml" value="0.2465277777777778" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/radio_bt_background.xml" value="0.3328888888888889" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/radio_bt_icon_color.xml" value="0.3328888888888889" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/radio_bt_text_color.xml" value="0.3328888888888889" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/selector_edit_text.xml" value="0.3328888888888889" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/selector_radio_bt_icon_color.xml" value="0.3328888888888889" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/selector_radio_fat_body.xml" value="0.16018518518518518" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/selector_radio_slim_body.xml" value="0.16018518518518518" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/selector_radio_thin_body.xml" value="0.16018518518518518" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/drawable/selector_width_indicator.xml" value="0.3328888888888889" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout-v28/fragment_body_setup_begin.xml" value="0.37395833333333334" />
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/dialog_enter_phone.xml" value="0.32342342342342345" />
-        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_body_setup_begin.xml" value="0.32342342342342345" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/dialog_choose_auth_way.xml" value="0.33" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/dialog_enter_otp.xml" value="0.33" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/dialog_enter_phone.xml" value="0.33" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_body_setup_begin.xml" value="0.33" />
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_choose_auth_way_dialog_list_dialog.xml" value="0.23796296296296296" />
-        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_finish_user_setup.xml" value="0.32342342342342345" />
-        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_get_body_type.xml" value="0.32342342342342345" />
-        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_get_gender.xml" value="0.32342342342342345" />
-        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_get_name.xml" value="0.32342342342342345" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_finish_user_setup.xml" value="0.22" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_get_body_type.xml" value="0.22" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_get_gender.xml" value="0.33" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_get_name.xml" value="0.33" />
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_get_tall.xml" value="0.32342342342342345" />
-        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_get_training_density.xml" value="0.32342342342342345" />
-        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_get_wanted_weight.xml" value="0.32342342342342345" />
-        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_get_weight.xml" value="0.32342342342342345" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_get_training_density.xml" value="0.33" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_get_wanted_weight.xml" value="0.33" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_get_weight.xml" value="0.33" />
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_program.xml" value="0.25" />
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_settings.xml" value="0.24930555555555556" />
-        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_welcome.xml" value="0.25" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_welcome.xml" value="0.32342342342342345" />
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/fragment_workout.xml" value="0.22" />
+        <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/layout/item_welcome.xml" value="0.32342342342342345" />
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/menu/menu_bottm_bar.xml" value="0.37395833333333334" />
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/menu/menu_bottom_bar.xml" value="0.2" />
         <entry key="..\:/Users/YourPc/AndroidStudioProjects/RunTracking/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3648148148148148" />

@@ -1,13 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_enter_phone_parent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white"
-        >
+        android:layout_height="wrap_content"
+        android:background="@drawable/back_sheet_stroked">
 
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_5sdp"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:src="@drawable/ic_dialog_label"
+            app:layout_constraintBottom_toTopOf="@+id/tv_header_welcome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
 
+        <TextView
+            android:id="@+id/tv_header_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/metropolis_semi_bold"
+            android:gravity="center"
+            android:text="What’s your mobile number?"
+            android:textColor="@color/secondary_color"
+            android:textSize="@dimen/_23sdp"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_autoDetectLanguage="true"
+            app:ccp_padding="@dimen/_5sdp"
+            app:ccp_showArrow="false"
+            app:ccp_showNameCode="false"
+            app:ccp_textSize="@dimen/_15sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/layout_getPhone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/layout_getPhone" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_getPhone"
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:orientation="horizontal"
+            app:endIconMode="clear_text"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ccp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_header_welcome">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/metropolis_medium"
+                android:hint="Phone number"
+                android:inputType="phone"
+                android:paddingVertical="@dimen/_10sdp"
+                android:textSize="@dimen/_12sdp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/bt_to_otp"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginVertical="@dimen/_15sdp"
+            android:background="@drawable/back_button"
+            android:fontFamily="@font/metropolis_medium"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            app:backgroundTint="@color/primary_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_getPhone" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

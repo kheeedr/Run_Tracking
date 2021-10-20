@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c)    15/9/2021
+  ~ Mohamed khedr
+  -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_body_slim_selected" android:state_checked="true" />
+    <item android:drawable="@drawable/ic_body_slim_unselected" android:state_checked="false"  />
+    <item android:drawable="@color/trans"  />
+</selector>

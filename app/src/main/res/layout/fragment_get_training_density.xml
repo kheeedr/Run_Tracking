@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -8,11 +9,169 @@
         android:background="@color/white"
         tools:context=".presentation.ui.user_setup.GetTrainingDensityFragment">
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:src="@drawable/ic_bar_steps_8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_header_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:fontFamily="@font/avenir_next_demi_bold"
+                android:gravity="center"
+                android:text="Select your training intensity"
+                android:textColor="@color/secondary_color"
+                android:textSize="@dimen/_19sdp"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+            <TextView
+                android:id="@+id/tv_body_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:fontFamily="@font/metropolis_medium"
+                android:gravity="center"
+                android:lineHeight="@dimen/_15sdp"
+                android:text="Try not to overdo if this is your first time."
+                android:textColor="@color/natural2"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@id/tv_header_welcome"
+                tools:layout_editor_absoluteX="0dp"
+                tools:targetApi="p" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/metropolis_medium"
+                android:gravity="center"
+                android:lineHeight="@dimen/_15sdp"
+                android:text="Based on your situation we suggest "
+                android:textColor="@color/natural2"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintEnd_toStartOf="@id/tv_ourTrainingDensitySuggestion"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_body_welcome"
+                tools:targetApi="p" />
+
+            <TextView
+                android:id="@+id/tv_ourTrainingDensitySuggestion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/metropolis_medium"
+                android:gravity="center"
+                android:lineHeight="@dimen/_15sdp"
+                android:text="Light "
+                android:textColor="@color/light_primary_color"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="@+id/textView"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                tools:targetApi="p" />
+
+            <RadioGroup
+                android:id="@+id/radioGr_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintBottom_toTopOf="@+id/bt_to_getFinishSetup"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_body_welcome"
+                app:layout_constraintVertical_bias="0.2">
+
+                <RadioButton
+                    android:id="@+id/radioBt_densityLight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:background="@drawable/selector_radio_bt_background"
+                    android:button="@null"
+                    android:drawableTint="@color/radio_icon_tint"
+                    android:fontFamily="@font/avenir_next_demi_bold"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="Light  \n (2 run p/w)"
+                    android:textColor="@drawable/selector_radio_bt_text_color"
+                    android:textSize="@dimen/_12sdp" />
+
+                <RadioButton
+                    android:id="@+id/radioBt_densityMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/selector_radio_bt_background"
+                    android:button="@null"
+                    android:fontFamily="@font/avenir_next_demi_bold"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="Medium \n (3 run p/w)"
+                    android:textColor="@drawable/selector_radio_bt_text_color"
+                    android:textSize="@dimen/_12sdp" />
+
+                <RadioButton
+                    android:id="@+id/radioBt_densityIntense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/selector_radio_bt_background"
+                    android:button="@null"
+                    android:fontFamily="@font/avenir_next_demi_bold"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:text="Intense \n (5 run p/w)"
+                    android:textColor="@drawable/selector_radio_bt_text_color"
+                    android:textSize="@dimen/_12sdp" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/bt_to_getFinishSetup"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/back_button"
+                android:fontFamily="@font/avenir_next_demi_bold"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:backgroundTint="@color/primary_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </FrameLayout>
 </layout>

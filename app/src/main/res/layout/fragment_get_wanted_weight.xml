@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <FrameLayout
@@ -8,11 +9,145 @@
         android:background="@color/white"
         tools:context=".presentation.ui.user_setup.GetWantedWeightFragment">
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            tools:ignore="ContentDescription">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:src="@drawable/ic_bar_steps_7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_header_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:fontFamily="@font/avenir_next_demi_bold"
+                android:gravity="center"
+                android:text="What is your weight goal?"
+                android:textColor="@color/secondary_color"
+                android:textSize="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+            <TextView
+                android:id="@+id/tv_body_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/metropolis_medium"
+                android:gravity="center"
+                android:lineHeight="@dimen/_15sdp"
+                android:text="Select your ideal weight goal."
+                android:textColor="@color/natural2"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@id/tv_header_welcome"
+                tools:layout_editor_absoluteX="26dp"
+                tools:targetApi="p" />
+
+            <TextView
+                android:id="@+id/tv_we_suggested_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:fontFamily="@font/metropolis_medium"
+                android:gravity="center"
+                android:text="Based on your BMI we suggest"
+                android:textColor="@color/natural2"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_suggested_weight"
+                app:layout_constraintEnd_toStartOf="@+id/tv_suggested_weight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_suggested_weight"
+                app:layout_constraintHorizontal_chainStyle="packed"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_suggested_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:layout_marginTop="6dp"
+                android:fontFamily="@font/metropolis_medium"
+                android:text="82 Kg"
+                android:textColor="@color/light_primary_color"
+                android:textSize="@dimen/_18sdp"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/tv_we_suggested_weight"
+                app:layout_constraintTop_toBottomOf="@+id/tv_body_welcome" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/back_white_center_gradiant_for_light_background"
+                android:translationZ="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/wheel_view_wantedWeight"
+                app:layout_constraintEnd_toEndOf="@+id/wheel_view_wantedWeight"
+                app:layout_constraintStart_toStartOf="@+id/wheel_view_wantedWeight"
+                app:layout_constraintTop_toTopOf="@+id/wheel_view_wantedWeight" />
+
+            <io.blackbox_vision.wheelview.view.WheelView
+                android:id="@+id/wheel_view_wantedWeight"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="0dp"
+                android:layout_marginVertical="@dimen/_10sdp"
+                app:canLoop="false"
+                app:centerTextColor="@color/secondary_color"
+                app:layout_constraintBottom_toTopOf="@+id/bt_to_getTrainingDensity"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_suggested_weight"
+                app:lineColor="@color/white"
+                app:topBottomTextColor="#707070" />
+
+
+            <TextView
+                android:id="@+id/tv_wheel_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/metropolis_medium"
+                android:gravity="center"
+                android:text="Kg"
+                android:textColor="@color/secondary_color"
+                android:textSize="@dimen/_30sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/wheel_view_wantedWeight"
+                app:layout_constraintStart_toEndOf="@+id/wheel_view_wantedWeight"
+                app:layout_constraintTop_toTopOf="@+id/wheel_view_wantedWeight" />
+
+            <Button
+                android:id="@+id/bt_to_getTrainingDensity"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/back_button"
+                android:fontFamily="@font/avenir_next_demi_bold"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:backgroundTint="@color/primary_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </FrameLayout>
 </layout>

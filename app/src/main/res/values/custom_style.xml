@@ -24,6 +24,31 @@
         <item name="android:translationZ">@dimen/_15sdp</item>
     </style>
 
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@color/trans</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <item name="colorControlHighlight">#6200EA</item>
+
+        <item name="boxStrokeColor">@color/primary_color</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+
+        <item name="boxCornerRadiusBottomEnd">7dp</item>
+        <item name="boxCornerRadiusBottomStart">7dp</item>
+        <item name="boxCornerRadiusTopEnd">7dp</item>
+        <item name="boxCornerRadiusTopStart">7dp</item>
+
+    </style>
 
 
 </resources>

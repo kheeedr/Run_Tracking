@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -8,11 +9,109 @@
         android:background="@color/white"
         tools:context=".presentation.ui.user_setup.GetWeightFragment">
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            tools:ignore="ContentDescription">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_50sdp"
+                android:src="@drawable/ic_bar_steps_5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_header_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:fontFamily="@font/avenir_next_demi_bold"
+                android:gravity="center"
+                android:text="How much do you weight?"
+                android:textColor="@color/secondary_color"
+                android:textSize="@dimen/_20sdp"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+            <TextView
+                android:id="@+id/tv_body_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:fontFamily="@font/metropolis_medium"
+                android:gravity="center"
+                android:lineHeight="@dimen/_15sdp"
+                android:text="This helps us to determine your bmi \n( body mass index) 🤓."
+                android:textColor="@color/natural2"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@id/tv_header_welcome"
+                tools:targetApi="p" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/back_white_center_gradiant_for_light_background"
+                android:translationZ="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/wheel_view_getWeight"
+                app:layout_constraintEnd_toEndOf="@+id/wheel_view_getWeight"
+                app:layout_constraintStart_toStartOf="@+id/wheel_view_getWeight"
+                app:layout_constraintTop_toTopOf="@+id/wheel_view_getWeight" />
+
+            <io.blackbox_vision.wheelview.view.WheelView
+                android:id="@+id/wheel_view_getWeight"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="0dp"
+                app:canLoop="false"
+                android:layout_marginVertical="@dimen/_20sdp"
+                app:centerTextColor="@color/secondary_color"
+                app:layout_constraintBottom_toTopOf="@id/bt_to_getBodyType"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_body_welcome"
+                app:lineColor="@color/white"
+                app:topBottomTextColor="#707070" />
+
+
+            <TextView
+                android:id="@+id/tv_wheel_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/metropolis_medium"
+                android:gravity="center"
+                android:text="Kg"
+                android:textColor="@color/secondary_color"
+                android:textSize="@dimen/_30sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/wheel_view_getWeight"
+                app:layout_constraintStart_toEndOf="@+id/wheel_view_getWeight"
+                app:layout_constraintTop_toTopOf="@+id/wheel_view_getWeight" />
+
+            <Button
+                android:id="@+id/bt_to_getBodyType"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/back_button"
+                android:fontFamily="@font/avenir_next_demi_bold"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:backgroundTint="@color/primary_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     </FrameLayout>
 </layout>

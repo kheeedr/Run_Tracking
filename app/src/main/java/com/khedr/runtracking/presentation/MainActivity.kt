@@ -16,7 +16,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var b: ActivityMainBinding
-
+    lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
@@ -24,17 +24,23 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         b = DataBindingUtil.setContentView(this, R.layout.activity_main)
+//        b.navBar.visibility = View.GONE
+        b.fabMainPage.setOnClickListener { b.navBar.selectedItemId = R.id.workout_fragment }
 
-        b.fabMainPage.setOnClickListener { b.navBar.selectedItemId = R.id.workout_item }
-
-        val navController: NavController = findNavController(this, R.id.fragmentContainerView)
+        navController = findNavController(this, R.id.fragmentContainerView)
         NavigationUI.setupWithNavController(b.navBar, navController)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.workout_item, R.id.profile_item, R.id.program_item ->
+                R.id.workout_fragment, R.id.profile_fragment, R.id.program_fragment -> {
                     b.navBar.visibility = View.VISIBLE
-                else -> b.navBar.visibility = View.GONE
+                    b.fabMainPage.visibility = View.VISIBLE
+
+                }
+                else -> {
+                    b.navBar.visibility = View.GONE
+                    b.fabMainPage.visibility = View.GONE
+                }
             }
         }
     }

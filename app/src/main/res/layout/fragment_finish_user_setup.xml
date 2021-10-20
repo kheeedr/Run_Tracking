@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
-
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -9,11 +9,70 @@
         android:background="@color/white"
         tools:context=".presentation.ui.user_setup.FinishUserSetupFragment">
 
-        <!-- TODO: Update blank fragment layout -->
-        <TextView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment" />
+            android:layout_height="match_parent">
 
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_20sdp"
+                android:src="@drawable/ic_finish_setup"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_header_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:fontFamily="@font/avenir_next_demi_bold"
+                android:gravity="center"
+                app:layout_constraintVertical_bias="0.2"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="  Wohoo 🎉 \n Now let’s get you movin’"
+                android:textColor="@color/secondary_color"
+                android:textSize="@dimen/_19sdp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_body_welcome"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/tv_body_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:fontFamily="@font/metropolis_medium"
+                android:gravity="center"
+                android:lineHeight="@dimen/_18sdp"
+                android:text="You have successfully completed your body setup!"
+                android:textColor="@color/natural2"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintBottom_toTopOf="@+id/bt_to_getFinishSetup"
+                app:layout_constraintTop_toBottomOf="@+id/tv_header_welcome"
+                tools:targetApi="p"
+                app:layout_constraintVertical_chainStyle="packed"/>
+
+            <Button
+                android:id="@+id/bt_to_getFinishSetup"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/back_button"
+                android:fontFamily="@font/avenir_next_demi_bold"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="Let's Begin"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                app:backgroundTint="@color/primary_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
 </layout>
