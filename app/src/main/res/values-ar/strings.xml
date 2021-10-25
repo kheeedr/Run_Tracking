@@ -8,7 +8,15 @@
         <item>متوسط السرعه</item>
         <item>السعرات المستهلكه</item>
     </string-array>
+    <string name="program">البرنامج  </string>
 
-    <string name="program">برنامجي</string>
-    <string name="profile">حسابي</string>
+    <string name="profile">الملف الشخصي  </string>
+
+    <string name="w1_d1">W1 D1 10 </string>
+
+    <string name="_15_mins">15 دقيقة 11 </string>
+
+    <string name="today_s_running_session">جلسة تشغيل اليوم  </string>
+
+    <string name="start_running">ابدأ الجري </string>
 </resources>

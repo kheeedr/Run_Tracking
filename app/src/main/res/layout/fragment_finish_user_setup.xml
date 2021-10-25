@@ -13,30 +13,36 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
+            <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/imageView4"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_20sdp"
-                android:src="@drawable/ic_finish_setup"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_30sdp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_percent="0.4"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="false"
+                android:scaleX="1.2"
+                android:scaleY="1.2"
+                app:lottie_rawRes="@raw/check_successful"
+                />
 
             <TextView
                 android:id="@+id/tv_header_welcome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
                 android:fontFamily="@font/avenir_next_demi_bold"
                 android:gravity="center"
-                app:layout_constraintVertical_bias="0.2"
-                android:layout_marginBottom="@dimen/_10sdp"
                 android:text="  Wohoo 🎉 \n Now let’s get you movin’"
                 android:textColor="@color/secondary_color"
                 android:textSize="@dimen/_19sdp"
                 app:layout_constraintBottom_toTopOf="@+id/tv_body_welcome"
                 app:layout_constraintTop_toBottomOf="@+id/imageView4"
+                app:layout_constraintVertical_bias="0.3"
                 app:layout_constraintVertical_chainStyle="packed" />
 
             <TextView
@@ -50,13 +56,13 @@
                 android:text="You have successfully completed your body setup!"
                 android:textColor="@color/natural2"
                 android:textSize="@dimen/_15sdp"
-                app:layout_constraintBottom_toTopOf="@+id/bt_to_getFinishSetup"
+                app:layout_constraintBottom_toTopOf="@+id/bt_to_workout"
                 app:layout_constraintTop_toBottomOf="@+id/tv_header_welcome"
-                tools:targetApi="p"
-                app:layout_constraintVertical_chainStyle="packed"/>
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:targetApi="p" />
 
             <Button
-                android:id="@+id/bt_to_getFinishSetup"
+                android:id="@+id/bt_to_workout"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

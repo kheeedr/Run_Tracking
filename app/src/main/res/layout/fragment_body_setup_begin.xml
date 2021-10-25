@@ -27,26 +27,25 @@
                 android:id="@+id/tv_header_welcome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_30sdp"
                 android:fontFamily="@font/metropolis_bold"
                 android:gravity="center"
-                android:layout_marginHorizontal="@dimen/_20sdp"
                 android:text="Amazing, let’s begin!"
                 android:textColor="@color/secondary_color"
-                android:layout_marginTop="@dimen/_30sdp"
                 android:textSize="@dimen/_22sdp"
-                app:layout_constraintTop_toBottomOf="@+id/imageView2"
-                />
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
             <TextView
                 android:id="@+id/tv_body_welcome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginBottom="@dimen/_20sdp"
                 android:fontFamily="@font/metropolis_medium"
                 android:gravity="center"
                 android:lineHeight="@dimen/_15sdp"
-                android:layout_marginTop="@dimen/_20sdp"
                 android:text="The concept is simple. Bet money on yourself, complete the challenge and win your money back plus an amazing discount code! 💰💰"
                 android:textColor="@color/natural2"
                 android:textSize="@dimen/_12sdp"
@@ -55,8 +54,8 @@
                 tools:targetApi="p" />
 
             <android.widget.Button
-                style="?android:attr/borderlessButtonStyle"
                 android:id="@+id/bt_skip_setup"
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_20sdp"
@@ -74,8 +73,8 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button
-                style="?android:attr/borderlessButtonStyle"
                 android:id="@+id/bt_to_getName"
+                style="?android:attr/borderlessButtonStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_20sdp"

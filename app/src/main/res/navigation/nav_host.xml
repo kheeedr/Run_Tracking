@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_host"
-    app:startDestination="@id/welcomeFragment">
+    app:startDestination="@id/Home_navigation">
+
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.khedr.runtracking.presentation.ui.WelcomeFragment"
@@ -12,55 +13,50 @@
 
         <action
             android:id="@+id/action_welcomeFragment_to_workout_item"
-            app:destination="@id/workout_fragment" />
+            app:destination="@id/Home_navigation" />
         <action
-            android:id="@+id/action_welcomeFragment_to_chooseAuthWayDialogFragment2"
-            app:destination="@id/chooseAuthWayDialogFragment" />
-        <action
-            android:id="@+id/action_welcomeFragment_to_enterPhoneDialogFragment"
-            app:destination="@id/enterPhoneDialogFragment" />
-
+            android:id="@+id/action_welcomeFragment_to_auth_navigation"
+            app:destination="@id/auth_navigation" />
 
     </fragment>
 
-    <fragment
-        android:id="@+id/program_fragment"
-        android:name="com.khedr.runtracking.presentation.ui.main_screens.ProgramFragment"
-        android:label="fragment_program"
-        tools:layout="@layout/fragment_program" />
+    <navigation
+        android:id="@+id/auth_navigation"
+        app:startDestination="@id/chooseAuthWayDialogFragment">
 
-    <fragment
-        android:id="@+id/workout_fragment"
-        android:name="com.khedr.runtracking.presentation.ui.main_screens.WorkoutFragment"
-        android:label="fragment_workout"
-        tools:layout="@layout/fragment_workout">
-        <action
-            android:id="@+id/action_workout_fragment_to_profile_fragment"
-            app:destination="@id/profile_fragment" />
-        <action
-            android:id="@+id/action_workout_fragment_to_program_fragment"
-            app:destination="@id/program_fragment" />
-        <action
-            android:id="@+id/action_workout_fragment_to_runFragment"
-            app:destination="@id/runFragment" />
-    </fragment>
+        <fragment
+            android:id="@+id/chooseAuthWayDialogFragment"
+            android:name="com.khedr.runtracking.presentation.ui.auth.AuthWayFragment"
+            android:label="dialog_choose_auth_way"
+            tools:layout="@layout/fragment_choose_auth_way">
+            <action
+                android:id="@+id/action_chooseAuthWayDialogFragment_to_enterPhoneDialogFragment"
+                app:destination="@id/enterPhoneDialogFragment" />
+        </fragment>
 
-    <fragment
-        android:id="@+id/profile_fragment"
-        android:name="com.khedr.runtracking.presentation.ui.main_screens.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile">
-        <action
-            android:id="@+id/action_profile_item_to_settingsFragment"
-            app:destination="@id/settings_fragment" />
-    </fragment>
+        <dialog
+            android:id="@+id/enterPhoneDialogFragment"
+            android:name="com.khedr.runtracking.presentation.ui.auth.EnterPhoneDialogFragment"
+            android:label="dialog_enter_phone"
+            tools:layout="@layout/dialog_enter_phone">
 
-    <fragment
-        android:id="@+id/settings_fragment"
-        android:name="com.khedr.runtracking.presentation.ui.main_screens.SettingsFragment"
-        android:label="fragment_settings"
-        tools:layout="@layout/fragment_settings" />
+            <action
+                android:id="@+id/action_enterPhoneDialogFragment_to_enterOtpDialogFragment"
+                app:destination="@id/enterOtpDialogFragment" />
+        </dialog>
 
+        <dialog
+            android:id="@+id/enterOtpDialogFragment"
+            android:name="com.khedr.runtracking.presentation.ui.auth.OtpDialogFragment"
+            android:label="dialog_enter_otp"
+            tools:layout="@layout/dialog_enter_otp">
+
+            <action
+                android:id="@+id/action_enterOtpDialogFragment_to_body_setup_navigation"
+                app:destination="@id/body_setup_navigation" />
+        </dialog>
+
+    </navigation>
 
     <navigation
         android:id="@+id/body_setup_navigation"
@@ -74,9 +70,7 @@
                 android:id="@+id/action_bodySetupBeginFragment_to_getNameFragment"
                 app:destination="@id/getNameFragment" />
         </fragment>
-        <action
-            android:id="@+id/action_global_from_setup_body_to_workout_item"
-            app:destination="@id/workout_fragment" />
+
         <fragment
             android:id="@+id/getNameFragment"
             android:name="com.khedr.runtracking.presentation.ui.user_setup.GetNameFragment"
@@ -145,39 +139,48 @@
             android:name="com.khedr.runtracking.presentation.ui.user_setup.FinishUserSetupFragment"
             android:label="fragment_finish_user_setup"
             tools:layout="@layout/fragment_finish_user_setup" />
+        <action
+            android:id="@+id/action_global_from_setup_body_to_home_navigation"
+            app:destination="@id/Home_navigation" />
     </navigation>
 
-        <dialog
-            android:id="@+id/enterOtpDialogFragment"
-            android:name="com.khedr.runtracking.presentation.ui.auth.OtpDialogFragment"
-            android:label="dialog_enter_otp"
-            tools:layout="@layout/dialog_enter_otp">
+    <navigation
+        android:id="@+id/Home_navigation"
+        app:startDestination="@id/homeFragment">
 
+        <fragment
+            android:id="@+id/homeFragment"
+            android:name="com.khedr.runtracking.presentation.ui.main_screens.HomeFragment"
+            android:label="fragment_workout"
+            tools:layout="@layout/fragment_home">
             <action
-                android:id="@+id/action_enterOtpDialogFragment_to_body_setup_navigation"
-                app:destination="@id/body_setup_navigation" />
-        </dialog>
-
-        <dialog
-            android:id="@+id/enterPhoneDialogFragment"
-            android:name="com.khedr.runtracking.presentation.ui.auth.EnterPhoneDialogFragment"
-            android:label="dialog_enter_phone"
-            tools:layout="@layout/dialog_enter_phone">
-
+                android:id="@+id/action_workout_fragment_to_runFragment"
+                app:destination="@id/runFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/runFragment"
+            android:name="com.khedr.runtracking.presentation.ui.main_screens.RunFragment"
+            android:label="fragment_run"
+            tools:layout="@layout/fragment_run" />
+        <fragment
+            android:id="@+id/program_fragment"
+            android:name="com.khedr.runtracking.presentation.ui.main_screens.ProgramFragment"
+            android:label="fragment_program"
+            tools:layout="@layout/fragment_program" />
+        <fragment
+            android:id="@+id/profile_fragment"
+            android:name="com.khedr.runtracking.presentation.ui.main_screens.ProfileFragment"
+            android:label="fragment_profile"
+            tools:layout="@layout/fragment_profile">
             <action
-                android:id="@+id/action_enterPhoneDialogFragment_to_enterOtpDialogFragment"
-                app:destination="@id/enterOtpDialogFragment" />
-        </dialog>
-        <dialog
-            android:id="@+id/chooseAuthWayDialogFragment"
-            android:name="com.khedr.runtracking.presentation.ui.auth.AuthWayDialogFragment"
-            android:label="dialog_choose_auth_way"
-            tools:layout="@layout/dialog_choose_auth_way"/>
-    <fragment
-        android:id="@+id/runFragment"
-        android:name="com.khedr.runtracking.RunFragment"
-        android:label="fragment_run"
-        tools:layout="@layout/fragment_run" />
-
+                android:id="@+id/action_profile_item_to_settingsFragment"
+                app:destination="@id/settings_fragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/settings_fragment"
+            android:name="com.khedr.runtracking.presentation.ui.main_screens.SettingsFragment"
+            android:label="fragment_settings"
+            tools:layout="@layout/fragment_settings" />
+    </navigation>
 
 </navigation>

@@ -17,7 +17,7 @@ class GetTrainingDensityFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        b.btToGetFinishSetup.setOnClickListener {
+        b.btToFinishSetup.setOnClickListener {
             val action =
                 GetTrainingDensityFragmentDirections.actionGetTrainingDensityFragmentToFinishUserSetupFragment()
             findNavController().navigate(action)

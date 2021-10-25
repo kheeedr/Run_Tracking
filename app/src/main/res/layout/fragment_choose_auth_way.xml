@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/img_man_on_track"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/tv_header_welcome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:fontFamily="@font/metropolis_bold"
+                    android:gravity="center"
+                    android:text="Login or SignUp"
+                    android:textColor="@color/secondary_color"
+                    android:textSize="@dimen/_25sdp"
+                    app:layout_constraintBottom_toTopOf="@+id/tv_body_welcome"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+                <TextView
+                    android:id="@+id/tv_body_welcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginVertical="@dimen/_10sdp"
+                    android:fontFamily="@font/metropolis_medium"
+                    android:gravity="center"
+                    android:lineHeight="@dimen/_18sdp"
+                    android:text="Welcome to Just RUN. First thing first login or signUp so that we can begin."
+                    android:textColor="@color/natural3"
+                    android:textSize="@dimen/_12sdp"
+                    tools:targetApi="p" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_header_welcome"
+                app:layout_constraintVertical_bias="0.95">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/bt_phone_choose_auth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:background="@drawable/back_button"
+                    android:elevation="@dimen/_1sdp"
+                    android:translationZ="@dimen/_2sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/metropolis_semi_bold"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_12sdp"
+                        android:text="Continue With Phone Number"
+                        android:textAllCaps="false"
+                        android:textColor="@color/secondary_color"
+                        android:textSize="@dimen/_10sdp"
+                        app:backgroundTint="@color/white"
+                        app:drawableEndCompat="@drawable/ic_phone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/bt_bt_google_choose_auth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginVertical="@dimen/_5sdp"
+                    android:background="@drawable/back_button"
+                    android:elevation="@dimen/_1sdp"
+                    android:translationZ="@dimen/_2sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/metropolis_semi_bold"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_12sdp"
+                        android:text="Continue With Google"
+                        android:textAllCaps="false"
+                        android:textColor="@color/secondary_color"
+                        android:textSize="@dimen/_10sdp"
+                        app:backgroundTint="@color/white"
+                        app:drawableEndCompat="@drawable/ic_google"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/bt_facebook_choose_auth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@drawable/back_button"
+                    android:elevation="@dimen/_1sdp"
+                    android:translationZ="@dimen/_2sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:fontFamily="@font/metropolis_semi_bold"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_12sdp"
+                        android:text="Continue With Facebook"
+                        android:textAllCaps="false"
+                        android:textColor="@color/secondary_color"
+                        android:textSize="@dimen/_10sdp"
+                        app:backgroundTint="@color/white"
+                        app:drawableEndCompat="@drawable/ic_facebook"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>

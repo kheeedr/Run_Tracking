@@ -15,23 +15,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/SplashTheme">
+        <service
+            android:name=".presentation.services.TrackingService"
+            android:enabled="true"
+            android:foregroundServiceType="location" />
+
         <activity
             android:name=".presentation.MainActivity"
             android:exported="true"
             android:screenOrientation="nosensor"
-            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" >
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-            <meta-data
-                android:name="com.google.android.gms.version"
-                android:value="@integer/google_play_services_version" />
-            <meta-data
-                android:name="com.google.android.geo.API_KEY"
-                android:value="@string/google_maps_key" />
+            <nav-graph android:value="@navigation/nav_host" />
         </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
     </application>
 
 </manifest>

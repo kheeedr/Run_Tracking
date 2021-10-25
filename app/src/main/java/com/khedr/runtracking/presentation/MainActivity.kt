@@ -25,14 +25,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         b = DataBindingUtil.setContentView(this, R.layout.activity_main)
 //        b.navBar.visibility = View.GONE
-        b.fabMainPage.setOnClickListener { b.navBar.selectedItemId = R.id.workout_fragment }
+        b.fabMainPage.setOnClickListener { b.navBar.selectedItemId = R.id.homeFragment }
 
         navController = findNavController(this, R.id.fragmentContainerView)
         NavigationUI.setupWithNavController(b.navBar, navController)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.workout_fragment, R.id.profile_fragment, R.id.program_fragment -> {
+                R.id.homeFragment, R.id.profile_fragment, R.id.program_fragment -> {
                     b.navBar.visibility = View.VISIBLE
                     b.fabMainPage.visibility = View.VISIBLE
 

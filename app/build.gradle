@@ -122,4 +122,7 @@ dependencies {
 
     // wheel view
     implementation 'com.github.BlackBoxVision:material-wheel-view:v0.0.1'
+
+    //lottie animation
+    implementation "com.airbnb.android:lottie:3.6.0"
 }

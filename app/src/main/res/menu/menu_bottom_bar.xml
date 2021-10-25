@@ -20,7 +20,7 @@
 <!--        android:enabled="false"-->
 <!--        />-->
     <item
-        android:id="@+id/workout_fragment"
+        android:id="@+id/homeFragment"
         android:title=""
 
         />
