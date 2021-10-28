@@ -8,7 +8,6 @@
         <item>Calories Burned</item>
     </string-array>
 
-    <string name="google_maps_key" translatable="false">put your api key here</string>
     <string name="program">Program</string>
     <string name="profile">Profile</string>
     <!-- TODO: Remove or change this placeholder text -->

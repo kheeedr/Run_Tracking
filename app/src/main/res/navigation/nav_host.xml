@@ -161,12 +161,23 @@
             android:id="@+id/runFragment"
             android:name="com.khedr.runtracking.presentation.ui.main_screens.RunFragment"
             android:label="fragment_run"
-            tools:layout="@layout/fragment_run" />
+            tools:layout="@layout/fragment_run" >
+            <action
+                android:id="@+id/action_runFragment_to_homeFragment"
+                app:destination="@id/homeFragment"
+                app:launchSingleTop="true"
+                app:popUpToInclusive="true"
+                />
+        </fragment>
         <fragment
             android:id="@+id/program_fragment"
             android:name="com.khedr.runtracking.presentation.ui.main_screens.ProgramFragment"
             android:label="fragment_program"
-            tools:layout="@layout/fragment_program" />
+            tools:layout="@layout/fragment_program" >
+            <action
+                android:id="@+id/action_program_fragment_to_homeFragment"
+                app:destination="@id/homeFragment" />
+        </fragment>
         <fragment
             android:id="@+id/profile_fragment"
             android:name="com.khedr.runtracking.presentation.ui.main_screens.ProfileFragment"
@@ -175,6 +186,9 @@
             <action
                 android:id="@+id/action_profile_item_to_settingsFragment"
                 app:destination="@id/settings_fragment" />
+            <action
+                android:id="@+id/action_profile_fragment_to_homeFragment"
+                app:destination="@id/homeFragment" />
         </fragment>
         <fragment
             android:id="@+id/settings_fragment"

@@ -4,8 +4,6 @@ plugins {
     id 'dagger.hilt.android.plugin'
     id 'kotlin-kapt'
     id 'androidx.navigation.safeargs'
-
-
 }
 
 android {
@@ -23,7 +21,8 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -74,8 +73,8 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1"
 
     // Navigation Components
-    implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
-    implementation "androidx.navigation:navigation-ui-ktx:2.3.5"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.4.0-alpha10"
+    implementation "androidx.navigation:navigation-ui-ktx:2.4.0-alpha10"
     implementation "androidx.fragment:fragment-ktx:1.4.0-alpha10"
 
 
@@ -109,7 +108,7 @@ dependencies {
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
 
     // chip navigation
-    implementation 'com.ismaeldivita.chipnavigation:chip-navigation-bar:1.3.4'
+    implementation 'com.github.ismaeldivita:chip-navigation-bar:1.3.4'
 
     // sms verify
     implementation 'io.github.chaosleung:pinview:1.4.4'
@@ -118,7 +117,7 @@ dependencies {
     implementation 'me.relex:circleindicator:2.1.6'
 
     // country code chooser
-    implementation 'com.hbb20:ccp:2.4.5'
+    implementation 'com.hbb20:ccp:2.5.0'
 
     // wheel view
     implementation 'com.github.BlackBoxVision:material-wheel-view:v0.0.1'

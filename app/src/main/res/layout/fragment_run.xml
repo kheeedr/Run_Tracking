@@ -5,13 +5,12 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".RunFragment">
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:ignore="ContentDescription" >
+            tools:ignore="ContentDescription">
 
             <com.google.android.gms.maps.MapView
                 android:id="@+id/mapView"
@@ -24,23 +23,67 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
 
+            <ImageView
+                android:id="@+id/bt_run_cancel"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_20sdp"
+                android:elevation="@dimen/_7sdp"
+                android:src="@drawable/ic_cancel"
+                android:translationZ="@dimen/_10sdp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ProgressBar
+                android:id="@+id/progressbar_timer"
+                style="@style/CircularDeterminateProgressBar"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:elevation="@dimen/_7sdp"
+                android:translationZ="@dimen/_10sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:progress="60" />
+
             <TextView
                 android:id="@+id/tv_timer"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_55sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_20sdp"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:background="@drawable/back_button_stroked"
                 android:elevation="@dimen/_2sdp"
                 android:fontFamily="@font/avenir_next_demi_bold"
                 android:gravity="center"
-                android:text="00 : 00 : 00"
-                android:textColor="@color/secondary_color"
-                android:textSize="@dimen/_22sdp"
-                android:translationZ="@dimen/_3sdp"
+                android:text="00 : 00"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/_20sdp"
+                android:translationZ="@dimen/_20sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/lottie_runner"
+                app:layout_constraintEnd_toEndOf="@+id/progressbar_timer"
+                app:layout_constraintStart_toStartOf="@+id/progressbar_timer"
+                app:layout_constraintTop_toTopOf="@+id/progressbar_timer"
+                app:layout_constraintVertical_bias=".55"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottie_runner"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:scaleX="1.6"
+                android:scaleY="1.6"
+                android:translationZ="@dimen/_20sdp"
+
+                app:layout_constraintBottom_toBottomOf="@+id/progressbar_timer"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="@+id/progressbar_timer"
+                app:layout_constraintVertical_bias=".7"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/running_man" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout2"
@@ -51,7 +94,7 @@
                 android:background="@drawable/back_button_stroked"
                 android:elevation="@dimen/_2sdp"
                 android:translationZ="@dimen/_3sdp"
-                app:layout_constraintBottom_toTopOf="@+id/bt_run_pause_resume"
+                app:layout_constraintBottom_toTopOf="@+id/bt_run_pause"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent">
 
@@ -66,8 +109,7 @@
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintHorizontal_chainStyle="spread_inside"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/tv_running_time"
@@ -158,12 +200,12 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
-                android:id="@+id/bt_run_pause_resume"
+                android:id="@+id/bt_run_start"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_20sdp"
-                android:layout_marginBottom="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
                 android:background="@drawable/back_button"
                 android:fontFamily="@font/avenir_next_demi_bold"
                 android:paddingVertical="@dimen/_5sdp"
@@ -172,9 +214,79 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/_12sdp"
                 app:backgroundTint="@color/primary_color"
-                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/bt_run_resume"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/bt_run_pause"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/back_button"
+                android:fontFamily="@font/avenir_next_demi_bold"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="Puase runnig"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone"
+                app:backgroundTint="@color/primary_color"
+                app:layout_constraintBottom_toTopOf="@+id/bt_run_start"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/bt_run_resume"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/back_button"
+                android:fontFamily="@font/avenir_next_demi_bold"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="Resume runnig"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone"
+                app:backgroundTint="@color/primary_color"
+                app:layout_constraintBottom_toBottomOf="@id/guideline_bottom"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="3"
+                app:layout_constraintStart_toEndOf="@+id/bt_run_finish" />
+
+            <Button
+                android:id="@+id/bt_run_finish"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:background="@drawable/back_button"
+                android:fontFamily="@font/avenir_next_demi_bold"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="Finish Run"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                android:visibility="gone"
+                app:backgroundTint="@android:color/holo_red_light"
+                app:layout_constraintBottom_toBottomOf="@+id/bt_run_resume"
+                app:layout_constraintEnd_toStartOf="@+id/bt_run_resume"
+                app:layout_constraintHorizontal_weight="2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/bt_run_resume" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_end="@dimen/_10sdp" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

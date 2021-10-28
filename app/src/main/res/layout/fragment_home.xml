@@ -69,15 +69,29 @@
 
 
             <ImageView
+                android:id="@+id/imageView11"
                 android:layout_width="@dimen/_45sdp"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
-                android:src="@drawable/ic_location_static"
+                android:translationZ="@dimen/_10sdp"
+                android:src="@drawable/ic_location_running"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias=".4" />
+                app:layout_constraintHorizontal_bias=".515"
+                app:layout_constraintVertical_bias=".42" />
+
+            <ImageView
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_route"
+                android:layout_marginTop="@dimen/_minus20sdp"
+                android:layout_marginEnd="@dimen/_7sdp"
+                app:layout_constraintEnd_toEndOf="@+id/imageView11"
+                app:layout_constraintStart_toStartOf="@+id/imageView11"
+                app:layout_constraintTop_toBottomOf="@+id/imageView11" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout"
