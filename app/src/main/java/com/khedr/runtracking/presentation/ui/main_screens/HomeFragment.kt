@@ -11,22 +11,23 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import com.khedr.runtracking.R
 import com.khedr.runtracking.databinding.FragmentHomeBinding
+import com.khedr.runtracking.presentation.MainActivity
 import com.khedr.runtracking.utils.Constants.REQUEST_CODE_LOCATION_PERMISSION
 import com.khedr.runtracking.utils.TrackingUtility
 import pub.devrel.easypermissions.AppSettingsDialog
 import pub.devrel.easypermissions.EasyPermissions
 
 
-class HomeFragment : Fragment(), EasyPermissions.PermissionCallbacks {
+class HomeFragment : Fragment(), EasyPermissions.PermissionCallbacks, View.OnClickListener {
+
     private lateinit var b: FragmentHomeBinding
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         requestPermissions()
 
-        b.btToStartRunning.setOnClickListener {
-            val action =HomeFragmentDirections.actionWorkoutFragmentToRunFragment()
-            findNavController().navigate(action)
-        }
+        b.btToStartRunning.setOnClickListener(this)
+        b.btToProfile.setOnClickListener(this)
     }
 
     private fun requestPermissions() {
@@ -79,6 +80,19 @@ class HomeFragment : Fragment(), EasyPermissions.PermissionCallbacks {
 
         b = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         return b.root
+    }
+
+    override fun onClick(v: View) {
+        when (v) {
+            b.btToStartRunning -> {
+                val action = HomeFragmentDirections.actionWorkoutFragmentToRunFragment()
+                findNavController().navigate(action)
+            }
+            b.btToProfile -> {
+                val activity = requireActivity() as MainActivity
+                activity.b.navBar.selectedItemId = R.id.profile_fragment
+            }
+        }
     }
 
 }

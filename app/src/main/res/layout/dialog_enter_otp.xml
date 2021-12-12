@@ -33,7 +33,6 @@
             android:textSize="@dimen/_18sdp"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-
         <com.chaos.view.PinView
             android:id="@+id/et_verifyCode_otp"
             style="@style/PinWidget.PinView"
@@ -51,10 +50,10 @@
             app:cursorColor="@color/primary_color"
             app:cursorWidth="@dimen/_1sdp"
             app:hideLineWhenFilled="true"
-            app:itemCount="4"
+            app:itemCount="6"
             app:itemHeight="@dimen/_40sdp"
-            app:itemSpacing="@dimen/_5sdp"
-            app:itemWidth="@dimen/_40sdp"
+            app:itemSpacing="@dimen/_3sdp"
+            app:itemWidth="@dimen/_35sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_header_welcome"
@@ -62,6 +61,52 @@
             app:lineWidth="0dp"
             app:viewType="rectangle" />
 
+        <LinearLayout
+            android:id="@+id/layout_resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_verifyCode_otp">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Didn't recive code?"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  Resend"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/_12sdp" />
+            <TextView
+                android:id="@+id/tv_otp_waiting_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  ( 00:59 )"
+                android:visibility="gone"
+                android:textSize="@dimen/_12sdp" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_enter_verify_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/primary_color"
+            android:indeterminateTintMode="src_atop"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/bt_back_otp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_verifyCode_otp" />
         <android.widget.Button
             android:id="@+id/bt_back_otp"
             style="?android:attr/borderlessButtonStyle"
@@ -79,6 +124,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/et_verifyCode_otp" />
+            app:layout_constraintTop_toBottomOf="@id/layout_resend" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -40,18 +40,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_3sdp"
             app:ccp_autoDetectCountry="true"
             app:ccp_autoDetectLanguage="true"
             app:ccp_padding="@dimen/_5sdp"
             app:ccp_showArrow="false"
             app:ccp_showNameCode="false"
             app:ccp_textSize="@dimen/_15sdp"
-            app:layout_constraintBottom_toBottomOf="@+id/layout_getPhone"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/layout_getPhone" />
+            app:layout_constraintTop_toTopOf="@+id/layout_etPhone" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/layout_getPhone"
+            android:id="@+id/layout_etPhone"
             style="@style/TextInputLayoutStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -76,25 +76,44 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
-            android:id="@+id/bt_to_otp"
-            style="?android:attr/borderlessButtonStyle"
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
             android:layout_marginHorizontal="@dimen/_20sdp"
             android:layout_marginVertical="@dimen/_15sdp"
-            android:background="@drawable/back_button"
-            android:fontFamily="@font/metropolis_medium"
-            android:paddingVertical="@dimen/_5sdp"
-            android:text="Next"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_15sdp"
-            app:backgroundTint="@color/primary_color"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layout_getPhone" />
+            app:layout_constraintTop_toBottomOf="@+id/layout_etPhone">
+
+            <ProgressBar
+                android:id="@+id/progress_enter_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:indeterminate="true"
+                android:indeterminateTintMode="src_atop"
+                android:indeterminateTint="@color/primary_color"
+                />
+
+            <Button
+                android:id="@+id/bt_to_otp"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/back_button"
+                android:fontFamily="@font/metropolis_medium"
+                android:paddingVertical="@dimen/_5sdp"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                app:backgroundTint="@color/primary_color" />
+        </FrameLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </layout>

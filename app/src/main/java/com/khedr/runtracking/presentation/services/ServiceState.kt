@@ -1,4 +1,4 @@
-package com.khedr.runtracking.utils
+package com.khedr.runtracking.presentation.services
 
 enum class ServiceState {
 

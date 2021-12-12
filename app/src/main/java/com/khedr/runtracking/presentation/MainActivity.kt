@@ -15,7 +15,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var b: ActivityMainBinding
+    lateinit var b: ActivityMainBinding
     private lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         b = DataBindingUtil.setContentView(this, R.layout.activity_main)
-//        b.navBar.visibility = View.GONE
+
         b.fabMainPage.setOnClickListener { b.navBar.selectedItemId = R.id.homeFragment }
 
         navController = findNavController(this, R.id.fragmentContainerView)
@@ -35,12 +35,20 @@ class MainActivity : AppCompatActivity() {
                 R.id.homeFragment, R.id.profile_fragment, R.id.program_fragment -> {
                     b.navBar.visibility = View.VISIBLE
                     b.fabMainPage.visibility = View.VISIBLE
-
                 }
                 else -> {
                     b.navBar.visibility = View.GONE
                     b.fabMainPage.visibility = View.GONE
                 }
+            }
+
+            when (destination.id) {
+                R.id.homeFragment ->
+                    b.fabMainPage.setImageResource(R.drawable.ic_runner_selected)
+
+                else ->
+                    b.fabMainPage.setImageResource(R.drawable.ic_runner_unselected)
+
             }
         }
     }

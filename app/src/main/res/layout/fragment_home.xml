@@ -54,7 +54,7 @@
                 tools:ignore="HardcodedText" />
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/imageView"
+                android:id="@+id/bt_to_profile"
                 android:layout_width="@dimen/_30sdp"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_marginEnd="@dimen/_20sdp"
@@ -79,8 +79,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintHorizontal_bias=".515"
-                app:layout_constraintVertical_bias=".42" />
+                app:layout_constraintHorizontal_bias=".52"
+                app:layout_constraintVertical_bias=".40" />
 
             <ImageView
                 android:layout_width="@dimen/_45sdp"
@@ -88,7 +88,7 @@
                 android:adjustViewBounds="true"
                 android:src="@drawable/ic_route"
                 android:layout_marginTop="@dimen/_minus20sdp"
-                android:layout_marginEnd="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
                 app:layout_constraintEnd_toEndOf="@+id/imageView11"
                 app:layout_constraintStart_toStartOf="@+id/imageView11"
                 app:layout_constraintTop_toBottomOf="@+id/imageView11" />

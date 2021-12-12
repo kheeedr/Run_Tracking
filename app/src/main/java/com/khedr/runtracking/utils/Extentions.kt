@@ -1,12 +1,22 @@
 package com.khedr.runtracking.utils
 
 import android.content.Context
+import android.graphics.Color
+import android.graphics.PorterDuff
 import android.view.View
 import android.widget.FrameLayout
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import android.view.inputmethod.InputMethodManager
+import androidx.core.graphics.BlendModeColorFilterCompat
+import androidx.core.graphics.BlendModeCompat
+import android.R.color
+
+import android.graphics.BlendModeColorFilter
+
+import android.os.Build
+import com.khedr.runtracking.R
 
 
 fun BottomSheetDialogFragment.makeDialogFullExpanded() {
@@ -43,3 +53,27 @@ fun BottomSheetDialogFragment.disableUserDragging() {
     }
 }
 
+//fun View.disable() {
+//    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+//        background.colorFilter = BlendModeColorFilterCompat.createBlendModeColorFilterCompat(
+//            Color.GRAY,
+//            BlendModeCompat.MULTIPLY
+//        )
+//    } else {
+//        background.setColorFilter(Color.GRAY, PorterDuff.Mode.SRC_ATOP)
+//    }
+//    isClickable = false
+//}
+//
+//fun View.enable() {
+//    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+//        background.colorFilter = BlendModeColorFilterCompat.createBlendModeColorFilterCompat(
+//            context.getColor(R.color.primary_color), BlendModeCompat.MULTIPLY
+//        )
+//    } else {
+//        background.setColorFilter(
+//            context.getColor(R.color.primary_color), PorterDuff.Mode.SRC_ATOP
+//        )
+//    }
+//    isClickable = true
+//}

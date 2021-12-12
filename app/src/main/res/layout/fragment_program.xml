@@ -5,23 +5,51 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".presentation.ui.main_screens.ProgramFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_40sdp"
             android:background="@color/white"
-            tools:context=".presentation.ui.main_screens.ProgramFragment">
+            tools:ignore="ContentDescription,HardcodedText">
 
             <TextView
+                android:id="@+id/tv_program"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="hello_blank_fragment"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/metropolis_semi_bold"
+                android:text="Your program"
+                android:textColor="@color/secondary_color"
+                android:textSize="@dimen/_20sdp"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/_20sdp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/_20sdp" />
+
+            <CalendarView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_250sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:firstDayOfWeek="7"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/tv_program" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </FrameLayout>
 </layout>

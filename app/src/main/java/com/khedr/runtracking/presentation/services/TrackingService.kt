@@ -31,7 +31,6 @@ import com.khedr.runtracking.utils.Constants.NOTIFICATION_CHANNEL_ID
 import com.khedr.runtracking.utils.Constants.NOTIFICATION_CHANNEL_NAME
 import com.khedr.runtracking.utils.Constants.NOTIFICATION_ID
 import com.khedr.runtracking.utils.Constants.TIMER_UPDATE_INTERVAL
-import com.khedr.runtracking.utils.ServiceState
 import com.khedr.runtracking.utils.TrackingUtility
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
